@@ -1,12 +1,19 @@
 package models
 
-import "github.com/gofrs/uuid"
+import (
+	"time"
+
+	"github.com/gofrs/uuid"
+)
 
 type User struct {
 	ID             uuid.UUID `json:"id"`
-	Name           string    `json:"name"`
+	Username       string    `json:"username"`
+	FullName       string    `json:"fullname"`
 	Email          string    `json:"email"`
-	Age            int       `json:"age"`
+	Password       string    `json:"password"`
+	Phone          string    `json:"phone"`
+	DOB            time.Time `json:"dob"`
 	Gender         string    `json:"gender"`
 	Location       string    `json:"location"`
 	ProfilePicture string    `json:"profile_picture"`
